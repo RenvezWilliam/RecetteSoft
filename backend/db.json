@@ -1,0 +1,31 @@
+{
+  "recette": [
+    {
+      "id": 1,
+      "nom": "Super pizza",
+      "titre": "La cuisine simple",
+      "page": 3,
+      "duree": "30 minutes",
+      "note": "Le livre se trouve dans l'étagère du fond",
+      "ingredients" : ["tomate", "fromage", "olive"]
+    },
+    {
+      "id": 2,
+      "nom": "Pâtes au beurre",
+      "titre": "La cuisine simple",
+      "page": 4,
+      "duree": "10 minutes",
+      "note": "Le livre se trouve dans l'étagère du fond",
+      "ingredients" : ["pâtes", "beurre"]
+    },
+    {
+      "id": 3,
+      "nom": "Pâtes sans beurre",
+      "titre": "La cuisine simple",
+      "page": 5,
+      "duree": "10 minutes",
+      "note": "Le livre se trouve dans l'étagère du fond",
+      "ingredients" : ["pâtes"]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<div class="add-line-container">
+    <h2>Ajoute une recette !</h2>
+    <form (ngSubmit)="onSubmit()" class="form-container" >
+        <div class="add-information">
+            <mat-form-field class="add-nom-recette">
+                <mat-label>Nom de la recette</mat-label>
+                <input matInput #nameControl [(ngModel)]="recipeName" name="recipeName">
+                </mat-form-field>
+            <mat-form-field class="add-titre-recette">
+                <mat-label>Titre du livre</mat-label>
+                <input matInput #titleControl [(ngModel)]="bookTitle" name="bookTitle">
+            </mat-form-field>
+            <mat-form-field class="add-page-recette">
+                <mat-label>Page</mat-label>
+                <input matInput type="number" #pageControl [(ngModel)]="recipePage" name="recipePage">
+                </mat-form-field>
+            <mat-form-field class="add-duree-recette">
+                <mat-label>Durée de la recette</mat-label>
+                <input matInput #nameControl [(ngModel)]="recipeDuration" name="recipeDuration">
+            </mat-form-field>
+        </div>
+        <div class="add-ingredients">
+            <mat-form-field class="add-ingredient-list">
+                <mat-label>Liste d'ingrédients</mat-label>
+                <mat-chip-grid #chipGrid aria-label="Enter ingredients">
+                  @for (ingredient of ingredients; track ingredient) {
+                    <mat-chip-row
+                      (removed)="remove(ingredient)"
+                      [editable]="true"
+                      (edited)="edit(ingredient, $event)"
+                      [aria-description]="'press enter to edit ' + ingredient.name">
+                      {{ingredient.name}}
+                      <button matChipRemove [attr.aria-label]="'remove ' + ingredient.name">
+                        <mat-icon>cancel</mat-icon>
+                      </button>
+                    </mat-chip-row>
+                  }
+                  <input placeholder="Nouvel ingredient..."
+                         [matChipInputFor]="chipGrid"
+                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                         [matChipInputAddOnBlur]="addOnBlur"
+                         (matChipInputTokenEnd)="add($event)"/>
+                </mat-chip-grid>
+              </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Ajouter</button>
+    </form>
+    
+
+    
+</div>
