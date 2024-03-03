@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public openGitHubPage() {
-    window.open("https://github.com/RenvezWilliam", "_blank");
+    window.open("https://github.com/RenvezWilliam/RecetteSoft", "_blank");
   }
 }

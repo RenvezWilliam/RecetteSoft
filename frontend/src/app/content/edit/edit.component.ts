@@ -1,7 +1,7 @@
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { Component, OnInit, inject } from '@angular/core';
 import { RecetteService } from '../../services/recette.service';
-import { Ingredient } from '../search/search.component';
+import { Ingredient } from '../../services/recette.service';
 import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -32,8 +32,13 @@ export class EditComponent {
     if (this.recipeDuration == null) {this.showError(); return;}
     if (this.ingredients.length == 0) {this.showError(); return;}
 
-    this.recetteService.addRecipe([this.recipeName, this.bookTitle, this.recipePage, this.recipeDuration, this.ingredients]);
+    this.recetteService.onAddRecipe([this.recipeName, this.bookTitle, this.recipePage, this.recipeDuration, this.ingredients]);
 
+    this.recipeName = ''
+    this.bookTitle = ''
+    this.recipePage = NaN 
+    this.recipeDuration = ''
+    this.ingredients = []
   }
 
   private showError() {

@@ -3,10 +3,8 @@ import { Component, OnInit, inject } from '@angular/core';
 import { MatChipEditedEvent, MatChipInputEvent } from '@angular/material/chips';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { RecetteService } from '../../services/recette.service';
+import { Ingredient } from '../../services/recette.service';
 
-export interface Ingredient {
-  name: string;
-}
 
 @Component({
   selector: 'app-search',
@@ -36,7 +34,7 @@ export class SearchComponent implements OnInit{
       ]
     },
     { headerName: 'Durée', field: 'duree', resizable: false, width: '150px', filter: 'agTextColumnFilter' },
-    { headerName: 'Ingrédients', field: 'ingredients', resizable: false, flex: 1  }
+    { headerName: 'Ingrédients', field: 'ingredients', minWidth: 150, maxWidth: 1000, resizable: true, flex: 1 }
   ];
   public theme: string = "ag-theme-quartz";
 

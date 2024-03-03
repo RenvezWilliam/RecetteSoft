@@ -1,31 +1,55 @@
 {
   "recette": [
     {
-      "id": 1,
+      "id": "1",
       "nom": "Super pizza",
       "titre": "La cuisine simple",
       "page": 3,
       "duree": "30 minutes",
       "note": "Le livre se trouve dans l'étagère du fond",
-      "ingredients" : ["tomate", "fromage", "olive"]
+      "ingredients": [
+        "tomate",
+        "fromage",
+        "olive"
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "nom": "Pâtes au beurre",
       "titre": "La cuisine simple",
       "page": 4,
       "duree": "10 minutes",
       "note": "Le livre se trouve dans l'étagère du fond",
-      "ingredients" : ["pâtes", "beurre"]
+      "ingredients": [
+        "pâtes",
+        "beurre"
+      ]
     },
     {
-      "id": 3,
+      "id": "3",
       "nom": "Pâtes sans beurre",
       "titre": "La cuisine simple",
       "page": 5,
       "duree": "10 minutes",
       "note": "Le livre se trouve dans l'étagère du fond",
-      "ingredients" : ["pâtes"]
+      "ingredients": [
+        "pâtes"
+      ]
+    },
+    {
+      "id": 4,
+      "nom": "Pizza Titan",
+      "titre": "Pizzeria du coin (il est loin le coin)",
+      "page": 0,
+      "duree": "30 minutes",
+      "note": "généré automatiquement",
+      "ingredients": [
+        "sauce tomate",
+        "chorizo",
+        "haché de boeuf",
+        "fromage",
+        "autre choses sans doute"
+      ]
     }
   ]
 }
